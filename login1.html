@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | StudyFlow</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="login1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">📋 StudyFlow</div>
+        <button class="btn-primary" onclick="window.location.href='layout.html'">Voltar</button>
+    </header>
+
+    <main class="login-container">
+        <div>
+            <h1>Bem-vindo(a) de volta!</h1>
+            <p style="color: var(--gray); margin-top: 15px; line-height: 1.6;">Acesse sua área pessoal e continue organizando suas atividades, metas e sonhos.</p>
+        </div>
+
+        <div class="form-card">
+            <h2 style="margin-bottom: 25px; text-align: center;">Login</h2>
+            
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="email">E-mail</label>
+                    <input type="email" id="email" placeholder="seu@email.com" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" placeholder="••••••••" required>
+                </div>
+                <button type="submit" class="btn-submit">Entrar</button>
+            </form>
+
+            <div class="divider">ou</div>
+            
+            <div style="text-align: center; font-size: 13px;">
+                <p>Ainda não tem uma conta? <a href="registro.html" style="color: var(--primary); font-weight: 600;">Crie sua conta</a></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const emailInput = document.getElementById('email').value.toLowerCase().trim();
+            const passwordInput = document.getElementById('password').value;
+
+            const users = JSON.parse(localStorage.getItem('registeredUsers')) || [];
+            const validUser = users.find(user => user.email === emailInput && user.password === passwordInput);
+
+            if (validUser) {
+                localStorage.setItem('currentUser', JSON.stringify({ name: validUser.name, email: validUser.email }));
+                window.location.href = 'dashboard.html'; 
+            } else {
+                alert('E-mail ou senha incorretos.');
+            }
+        });
+    </script>
+</body>
+</html>
