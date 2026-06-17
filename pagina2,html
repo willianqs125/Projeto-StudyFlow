@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o StudyFlow | Organização com Propósito</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="pagina2.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">📋 StudyFlow</div>
+        <nav class="menu">
+            <a href="layout.html">Início</a>
+            <a href="pagina2.html" class="active">Sobre</a>
+            <a href="pagina3.html">Dicas</a>
+            <a href="pagina4.html">Ferramentas</a>
+            <a href="dashboard.html" class="nav-dashboard">📊 Painel</a>
+        </nav>
+        <button class="btn-primary" onclick="window.location.href='login1.html'">Comece agora</button>
+    </header>
+
+    <section class="about-hero">
+        <div class="hero-content">
+            <span class="badge">Nossa Missão</span>
+            <h1>Organização que <br><span class="highlight">transforma vidas</span></h1>
+            <p>Acreditamos que pequenas mudanças na forma como você gerencia suas atividades podem gerar grandes resultados. O StudyFlow não é apenas uma ferramenta, é o seu novo parceiro de produtividade.</p>
+        </div>
+        <div class="circle-badge">
+            <div class="circle-text">
+                FOCO<br>DISCIPLINA<br><span class="circle-divider">RESULTADOS</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="pilars-section">
+        <h2 class="section-title">Nossos pilares</h2>
+        <div class="pilars-grid">
+            <div class="pilar-card">🎯 <h5>Propósito</h5><p>Ajudamos você a definir o que é importante.</p></div>
+            <div class="pilar-card">💡 <h5>Clareza</h5><p>Planejamento intencional para sua mente.</p></div>
+            <div class="pilar-card">🔄 <h5>Constância</h5><p>Pequenas ações, grandes resultados.</p></div>
+            <div class="pilar-card">⚖️ <h5>Equilíbrio</h5><p>Produtividade que cuida do ser humano.</p></div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>🤍 StudyFlow - Organize-se hoje para viver o amanhã que você deseja.</p>
+    </footer>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
