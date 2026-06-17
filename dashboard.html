@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudyFlow - Painel de Controle</title>
+    <link rel="stylesheet" href="layout.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <h4>StudyFlow</h4>
+            <p id="userNameDisplay"></p>
+            <button id="btnDashboardLogout" class="btn-logout">Sair</button>
+        </aside>
+        <main class="main-content">
+            <div class="tasks-container">
+                <h3>Minhas Tarefas</h3>
+                <div class="progress-box">
+                    <div id="progressContainer" class="progress-bar-bg"><div id="progressBar" class="progress-bar-fill"></div></div>
+                    <p id="progressText">0% concluído</p>
+                </div>
+                <form id="todoForm" class="todo-form">
+                    <input type="text" id="taskInput" placeholder="O que estudar hoje?" required>
+                    <select id="categoryInput">
+                        <option value="Geral">Geral</option>
+                        <option value="Matemática">Matemática</option>
+                        <option value="História">História</option>
+                    </select>
+                    <button type="submit">Adicionar</button>
+                </form>
+                <button id="btnGenerateSchedule" class="btn-schedule">Gerar Cronograma Inteligente 📅</button>
+                <ul id="taskList" class="task-list"></ul>
+            </div>
+        </main>
+    </div>
+    <script src="auth.js"></script>
+    <script src="dashboard.js"></script>
+</body>
+</html>
